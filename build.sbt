@@ -9,9 +9,13 @@ scalaVersion := "2.11.7"
 
 lazy val versions = new {
   val mustache = "0.9.1"
-  val apacheCommons = "2.3"
+  val apacheCommonsIO = "2.3"
+  val apacheCommonsDBCP = "2.1.1"
 }
 
 libraryDependencies += "com.github.spullara.mustache.java" % "scala-extensions-2.11" % versions.mustache
 
-libraryDependencies += "commons-io" % "commons-io" %  versions.apacheCommons
+libraryDependencies += "commons-io" % "commons-io" %  versions.apacheCommonsIO
+
+libraryDependencies += "org.apache.commons" % "commons-dbcp2" % versions.apacheCommonsDBCP
+
